@@ -20,20 +20,6 @@ void draw() {
     int y = i * 200;
     drawOcean(0, y, colors[i]);
   }
-  fill(0);
-  textAlign(CENTER,CENTER);
-  textSize(50);
-  text("Cortisol", 500,70);
-  fill(255);
-  ellipse(500,200,250,180);
-  fill(255,0,0);
-  ellipse(500,200,240,170);
-  fill(0,255,0);
-  arc(500,200,240,170,radians(90),radians(270));
-  fill(0);
-  circle(500,200,20);
-  fill(lighterBlue);
-  rect(300,200,400,125);
 }
 
 void drawOcean (int x, int y, color colorChoice) {
