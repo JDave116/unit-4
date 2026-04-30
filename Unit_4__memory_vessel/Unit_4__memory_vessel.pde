@@ -11,11 +11,12 @@ color[] colors = {
 color colorchoice = lightestBlue;
 int lineX;
 int lineY;
+
 void setup() {
   size(1000, 800);
   noStroke();
   lineX = 380;
-  lineY = 200;
+  lineY = 190;
 }
 
 void draw() {
@@ -23,6 +24,8 @@ void draw() {
     int y = i * 200;
     drawOcean(0, y, colors[i]);
   }
+
+  // cortisol//
   fill(0);
   textAlign(CENTER, CENTER);
   textSize(50);
@@ -42,16 +45,27 @@ void draw() {
   strokeWeight(5);
   fill(0);
   line(500, 195, lineX, lineY);
-
-  if (lineY == 200) {
+  lineY = lineY += 1;
+  if (lineY >= 190) {
     lineY = 160;
-    lineY += 1;
   }
-
-  if (lineX == 380) {
-    lineX = 350;
-    lineX += 1;
-  }
+//bottom//
+  noStroke();
+  fill(255,207,111);
+  rect(0, 700, 1000, 100);
+  
+//treasure//
+  fill(255,172,5);
+  ellipse(500,700,100,75);
+  rect(450,540,100,140);
+  triangle(500,700, 440,745,560,745);
+  ellipse(500,650,130,147);
+  stroke(5);
+  strokeWeight(10);
+  fill(0);
+  line(500,530,500,560);
+  line(470,530,470,560);
+  line(530,530,530,560);
 }
 
 void drawOcean (int x, int y, color colorChoice) {
